@@ -263,22 +263,33 @@ keyAlias=jingye
 keyPassword=********
 ```
 
-并在 `app/build.gradle.kts` 的 `android { }` 里加上：
+然后在 `app/build.gradle.kts` 的 `android { }` 里新增 `signingConfigs`，并在**已有的** `release { }` 里加一行：
 
 ```kotlin
-signingConfigs {
-    create("release") {
-        val props = java.util.Properties().apply {
-            rootProject.file("keystore.properties").inputStream().use { load(it) }
+android {
+    signingConfigs {
+        create("release") {
+            val props = java.util.Properties().apply {
+                rootProject.file("keystore.properties").inputStream().use { load(it) }
+            }
+            storeFile = file(props.getProperty("storeFile"))
+            storePassword = props.getProperty("storePassword")
+            keyAlias = props.getProperty("keyAlias")
+            keyPassword = props.getProperty("keyPassword")
         }
-        storeFile = file(props.getProperty("storeFile"))
-        storePassword = props.getProperty("storePassword")
-        keyAlias = props.getProperty("keyAlias")
-        keyPassword = props.getProperty("keyPassword")
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")   // ← 只加这一行
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
     }
 }
-buildTypes { getByName("release") { signingConfig = signingConfigs.getByName("release") } }
 ```
+
+注意 `storeFile` 是相对 `app/` 模块解析的，所以 `../keystore.jks` 指向仓库根目录。
 
 **改版本时必须同时做两件事**：`versionCode` +1，且用同一份 keystore 签名，否则老用户无法覆盖升级。
 
