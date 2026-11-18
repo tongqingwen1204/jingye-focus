@@ -9,3 +9,6 @@ gradlew text eol=lf
 *.webp binary
 *.jar binary
 *.apk binary
+
+# GitHub 语言统计：这些是资源生成脚本，不计入语言百分比（文件仍保留在仓库中）
+tools/*.py linguist-detectable=false
