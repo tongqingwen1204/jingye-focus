@@ -214,7 +214,9 @@ jingye-focus/
 | APK 完整性 | `apksigner verify` / `unzip -t` | 通过，v3 签名，单签名者 |
 | 清单与组件 | `aapt2 dump xmltree` | 4 个 widget receiver、QS tile、静态快捷方式、`queries` 均在 |
 | 资源可解析 | 两条构建链各自 aapt2/AGP 链接 | 无缺失资源 |
-| 构建可复现 | 手工链 + `gradlew assembleDebug` | 资源条目 99 项、dex 类 22 个完全一致 |
+| 构建可复现 | 手工链 + `gradlew assembleDebug` | 资源条目 88 项、dex 类 20 个完全一致 |
+| 产物内容核对 | 直接解析 APK 内的 `classes.dex` / `resources.arsc` | dex 20 个类（含 9 个 `R$*` 与 2 个 lambda 合成类，业务类 8 个）、`resources.arsc` 9 个类型 88 个资源项、zip 共 47 个条目 |
+| 零权限核对 | 检索二进制 `AndroidManifest.xml` 字符串池（ASCII 与 UTF-16 双编码，带阳性对照） | **无任何 `uses-permission` 元素**；无 `INTERNET` / `ACCESS_NETWORK_STATE` / `ACCESS_WIFI_STATE`。仅出现 `android.permission.BIND_QUICK_SETTINGS_TILE`，那是磁贴服务被系统绑定时要求的声明，不是向用户申请的权限 |
 | 静态检查 | `gradlew lintDebug` | **0 error / 17 warning**，全部是 API 31+ 属性提示、targetSdk 落后一档这类提示 |
 | 磁贴图标 | 按 5 档密度 + 浅深各一套出图，`aapt2 dump resources` 可见 10 个配置 | 改前为空路径（无 `fillColor`），改后有图 |
 | 设计规范 | 对照 dev.mi.com 规范逐项核对 | 见 `docs/spec-compliance.md` |
