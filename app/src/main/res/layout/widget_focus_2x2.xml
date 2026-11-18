@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2×2 专注入口：淡蓝渐变卡 + 撑满卡片的人像，不放任何文字。
+     人像用 fitCenter 等比缩放，卡片多大就画多大：
+     110dp 的最小格子里约 82dp，常见的 180dp 格子里能到 152dp。 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_hero"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_padding_hero">
+
+    <ImageView
+        android:id="@+id/widget_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mark_figure" />
+</LinearLayout>

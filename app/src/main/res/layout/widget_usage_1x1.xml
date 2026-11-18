@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1×1 屏幕用时：一格空间，只有时钟、不带文字，点整格进屏幕使用时间。
+     与「专注小格」同一套骨架，靠图形本身区分，两个 1×1 摆在一起才不啰嗦。 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_tile"
+    android:padding="@dimen/widget_padding_1x1">
+
+    <ImageView
+        android:id="@+id/widget_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_clock" />
+</FrameLayout>

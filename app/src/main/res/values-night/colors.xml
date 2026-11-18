@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色模式：小米规范要求小部件必须适配深色模式 -->
+    <color name="app_bg">#0F141A</color>
+    <color name="surface">#1A2130</color>
+    <color name="text_primary">#F1F4F7</color>
+    <color name="text_secondary">#66F1F4F7</color>
+    <color name="accent">#8FC2F5</color>
+    <color name="widget_bg">#FF1A2130</color>
+    <color name="widget_divider">#1AFFFFFF</color>
+    <color name="widget_chip_bg">#14FFFFFF</color>
+    <color name="status_bar">#0F141A</color>
+
+    <!-- 深色下的主视觉：不是简单反色，而是把插画的蓝压暗成夜色 -->
+    <color name="hero_top">#26333F</color>
+    <color name="hero_bottom">#151E28</color>
+    <color name="hero_glow">#1FFFFFFF</color>
+    <color name="tile_bg">#1A2431</color>
+</resources>

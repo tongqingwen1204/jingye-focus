@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 与 2×2 组件同一套渐变（上浅下深），这里写死浅色值：
+     桌面图标不该随深色模式换色，否则同一枚图标在两种模式下长得不一样 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:endColor="#C3DCF6"
+        android:startColor="#F3F9FF"
+        android:type="linear" />
+</shape>

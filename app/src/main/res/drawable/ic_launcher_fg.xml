@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 自适应图标前景：直接把 mark_figure 缩进 18% 复用它，
+     108dp 画布里内容占 64%（≈69dp，安全区 66dp 略有余量），不必再单独出一张 432 的图 -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/mark_figure"
+    android:inset="18%" />

@@ -1,0 +1,21 @@
+# 构建产物
+build/
+build-manual/
+app/build/
+dist/
+.gradle/
+*.apk
+*.aab
+*.idsig
+
+# 本机配置
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+
+# 签名私钥绝不进版本库：泄漏等于别人可以伪造你的升级包
+*.jks
+*.keystore
+keystore.properties

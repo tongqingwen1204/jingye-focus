@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2×2 的主视觉底：淡蓝渐变（上浅下深）+ 头部后方一团柔光，
+     两层都裁同一个圆角，柔光不会漏到圆角外 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="@color/hero_bottom"
+                android:startColor="@color/hero_top" />
+            <corners android:radius="@dimen/widget_corner" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.30"
+                android:endColor="#00FFFFFF"
+                android:gradientRadius="74dp"
+                android:startColor="@color/hero_glow"
+                android:type="radial" />
+            <corners android:radius="@dimen/widget_corner" />
+        </shape>
+    </item>
+</layer-list>

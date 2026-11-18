@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 浅色模式：整体偏冷调，与插画的蓝同一族 -->
+    <color name="app_bg">#F4F7FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#1A1C22</color>
+    <!-- 次要信息：40% 黑，符合小米小部件字色层级规范 -->
+    <color name="text_secondary">#661A1C22</color>
+    <color name="accent">#3C82D6</color>
+    <color name="widget_bg">#FFFFFFFF</color>
+    <color name="widget_divider">#1A1A1C22</color>
+    <color name="widget_chip_bg">#0D1A1C22</color>
+    <color name="status_bar">#F4F7FA</color>
+
+    <!-- 2×2 主视觉：自上而下的淡蓝渐变 + 头部后方的一团柔光 -->
+    <color name="hero_top">#F3F9FF</color>
+    <color name="hero_bottom">#C3DCF6</color>
+    <color name="hero_glow">#99FFFFFF</color>
+    <!-- 1×1 格子底：极浅的蓝，衬托人像又不抢眼 -->
+    <color name="tile_bg">#F1F8FF</color>
+</resources>

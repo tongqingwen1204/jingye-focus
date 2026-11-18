@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 1080p：圆角 55px / 3 = 18.3dp，内容安全区 42px / 3 = 14dp，取 16dp -->
+    <dimen name="widget_corner">18dp</dimen>
+    <dimen name="widget_padding">16dp</dimen>
+    <!-- 1x1 格子更小，安全区等比收一档，否则内容会被挤到边缘 -->
+    <dimen name="widget_padding_1x1">12dp</dimen>
+    <!-- 2x2 只有人像，边距与 4x2 对齐，卡片之间摆在一起才不显松紧不一 -->
+    <dimen name="widget_padding_hero">16dp</dimen>
+    <dimen name="widget_chip_corner">12dp</dimen>
+    <dimen name="card_corner">20dp</dimen>
+</resources>

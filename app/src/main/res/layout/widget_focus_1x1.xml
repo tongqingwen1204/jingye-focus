@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1×1 专注：一格空间，只有人像、不带文字，点整格即进专注模式。
+     人像用 match_parent + fitCenter：格子多大就画多大，网格换行距也不会裁到脸。 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_tile"
+    android:padding="@dimen/widget_padding_1x1">
+
+    <ImageView
+        android:id="@+id/widget_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mark_figure" />
+</FrameLayout>

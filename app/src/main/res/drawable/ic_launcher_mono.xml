@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 主题图标（Android 13+）的单色层：同一张剪影，同样缩进 20% -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_mono"
+    android:inset="18%" />
